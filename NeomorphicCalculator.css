@@ -1,0 +1,75 @@
+.decor {
+    display: inline;
+}
+
+body{
+    background: #e3edf7;
+}
+input{
+    width:90%;
+    height: 36px;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.15),
+    -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1), 
+    0.5px 0.5px 0px rgba(0,0,0,0.15), 
+    0px 12px 10px -10px rgba(255,255,255,1) ;
+
+    border: 1px solid rgba(0,0,0,0.01);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    text-align: right;
+}
+.box {
+    border: 1px solid rgb(185, 180, 180);
+    background-color: rgb(238, 240, 247);
+    width: 196px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    margin: 49px 96px;
+    border-radius: 11px;
+    box-shadow: 6px 5px 19px 4px rgb(82, 79, 79);
+}
+operator{
+    background: yellowgreen;
+}
+button {
+    width: 22%;
+    height: 32px;
+    outline: none;
+    border: none;
+    margin: 1px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #e3edf7;
+    justify-content: center;
+    box-shadow: 6px 6px 10px 7px rgba(0,0,0,0.15),
+                -6px -6px 10px -4px rgba(255, 255, 255, 0.7) ;
+
+    border-radius: 10px;
+    transform: transition 0.5s;
+}
+
+button:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.15),
+    -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1), 
+    0.5px 0.5px 0px rgba(0,0,0,0.15), 
+    0px 12px 10px -10px rgba(255,255,255,1) ;
+
+border: 1px solid rgba(0,0,0,0.01);
+
+    color: rgb(8, 8, 8);
+    background-color: rgb(235, 236, 238);
+    transform: translateY(1px);
+}
+button:hover span{
+   
+   font-size: 12px;
+}
