@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="calc.css">
+
+    <script type="application/javascript">
+
+        var opr, a;
+        function numberkey(n) {
+            var txt = document.getElementById('txt');
+
+            var lastChar = txt.value.substring(txt.value.length-1);
+            if(isOperator(n) && isOperator(lastChar)) {
+
+                txt.value = txt.value.substring(0, txt.value.length - 1);
+            }
+            txt.value += n;
+        }
+
+        function isOperator(x) {
+
+            if(x == '+' || x == '-' || x == '*' || x == '/' || x == '%') {
+                return true;
+            }
+            return false;
+        }
+        function calc(){
+            document.getElementById('num').value=num/100;
+        }
+
+        function equal() {
+            txt.value = eval(txt.value);
+          
+        }
+        function percent(){
+            var percentile =eval(txt.value) ;
+            txt.value = percentile/100 ;
+        }
+        var bracket = '';
+        function bracketOf(){
+            if (bracket == '' || bracket == ')')
+            {
+                document.getElementById('txt').value+="(";
+                bracket ='(';
+            } else {
+               txt.value+=")";
+               bracket = ')';
+            }
+        }
+        function clearfunction() {
+            document.getElementById('txt').value='';
+            bracket = '';
+        }
+        function backSpace(){
+            var txt = document.getElementById('txt');
+           txt.value = txt.value.substring(0,txt.value.length-1);
+         if(bracket==')'){
+             bracket = '(';
+         } else  if(bracket=='('){
+             bracket = ')';
+         }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <div class="box">
+            <input type="text" style="font-size: 25px;" id="txt" />
+
+            <div class="decor">
+                <button onclick="bracketOf()"><span>()</span></button>
+                <button onclick="percent()"><span>%</span></button>
+                <button onclick="backSpace()"><span>X</span></button>
+                <button onclick="clearfunction()"
+                    style="background: rgb(240, 65, 34);font-size: 16px;"><b>C</b></button>
+            </div>
+            <div class="decor">
+                <button onclick="numberkey(1)" id="num"><span>1</span></button>
+                <button onclick="numberkey(2)" id="num"><span>2</span></button>
+                <button onclick="numberkey(3)" id="num"><span>3</span></button>
+                <button onclick="numberkey('+')" style="background: rgb(238, 238, 72);font-size: 16px;"><b>+</b></button>
+            </div>
+            </br>
+            <div class="decor">
+                <button onclick="numberkey(4)" id="num"><span>4</span></button>
+                <button onclick="numberkey(5)" id="num"><span>5</span></button>
+                <button onclick="numberkey(6)" id="num"><span>6</span></button>
+                <button onclick="numberkey('-')"
+                    style="background: rgb(238, 238, 72);font-size: 16px;"><b>-</b></button>
+            </div>
+            </br>
+            <div class="decor">
+                <button onclick="numberkey(7)" id="num"><span>7</span></button>
+                <button onclick="numberkey(8)" id="num"><span>8</span></button>
+                <button onclick="numberkey(9)" id="num"><span>9</span></button>
+                <button onclick="numberkey('*')"
+                    style="background: rgb(238, 238, 72);font-size: 16px;"><b>*</b></button>
+            </div>
+            </br>
+            <div class="decor">
+                <button onclick="numberkey('.')"><b>.</b></button>
+                <button onclick="numberkey(0)"><span>0</span></button>
+                <button onclick="equal()" style="background: greenyellow;font-size: 16px;"><b>=</b></button>
+                <button onclick="numberkey('/')"
+                    style="background: rgb(238, 238, 72);font-size: 16px;"><b>/</b></button>
+            </div>
+            </br>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
