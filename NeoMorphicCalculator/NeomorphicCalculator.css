@@ -31,13 +31,11 @@ input{
     position: absolute;
     justify-content: center;
     text-align: center;
-    margin: 49px 96px;
+    margin: 21px 30px;
     border-radius: 11px;
     box-shadow: 6px 5px 19px 4px rgb(82, 79, 79);
 }
-operator{
-    background: yellowgreen;
-}
+
 button {
     width: 22%;
     height: 32px;

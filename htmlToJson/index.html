@@ -1,0 +1,53 @@
+<DOCTYPE html>
+  <html>
+
+  <head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./jquery.serialize-object.min.js"></script>
+  </head>
+
+  <body>
+    <form method="POST" action="sample.json">
+      <div>
+        <input type="text" placeholder="Entity" name="entity" />
+        <input type="text" placeholder="Attribute" name="attribute[][attributeName]" />
+        <select name="attribute[][dataType]">
+          <option value="text">text </option>
+          <option value="date">date </option>
+          <option value="number">number </option>
+          <option value="password">password </option>
+        </select>
+      </div>
+      </br>
+
+      <div>
+        <button type="button" id="btn">Add more Attribute</button>
+        </br>
+      </div>
+      </br>
+
+      <script>
+        $(document).ready(function () {
+          $("#btn").click(function () {
+            $("form").append("<input name='attribute[][attributeName]' placeholder='attribute' />"
+           + "<select name='attribute[][dataType]'><option>text</option><option>date</option><option>number</option><option>password</option></select>");
+          });
+          $("#submit").click(function createJSON() {
+            var data = $("form").serializeArray();
+            $.each(data, function (i, field) {
+              myJSON = JSON.stringify($('form').serializeObject());
+              document.getElementById("ndiv").innerHTML = myJSON;
+              console.log(myJSON);
+            });
+          });
+        });
+      </script>
+    </form>
+    <button id="submit" type="button">Save</button>
+    
+    <div id="ndiv"></div>
+    </br>
+  </body>
+
+  </html>
