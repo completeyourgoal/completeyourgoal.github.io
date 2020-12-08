@@ -1,7 +1,7 @@
 
 {
 	"name" : "User",
-	"age" : "24",
+	"age" : 24,
 	"gender" : "f",
 	"country" : "india"
 }
