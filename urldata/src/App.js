@@ -28,7 +28,7 @@ class App extends React.Component {
         <>
           <>
             {items.map(item => (
-              <div style={{ width: '50%', padding: '40px' }}>
+              <div style={{ width: '50%'}}>
 
                 <div> <img alt='user' src={item.gender === 'M' ? '/image/male .png' : '/image/female.png'} style={{ width: "100px", marginLeft: "5px" }} />
                 </div>
